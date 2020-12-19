@@ -1,0 +1,25 @@
+client.on("voiceStateUpdate", (oldVoiceState, newVoiceState) => { // Odaya Katılıp Katılmadığını Sorgulama İşlemi
+
+
+
+
+
+    if (newVoiceState.channel) { 
+   
+
+if (newVoiceState.channel.id == "KANALID" && newVoiceState.member.roles.cache.has("ROL")) { 
+
+console.log(`Belirlenen whitelist kanalına kayıtsız ROL permiyle giriş yapıldı!`) 
+setTimeout(function(){ 
+  client.channels.cache.get('788857228747735110').send('SÜRELİ LOG'); 
+}, 1000);
+
+
+}
+
+L
+    } else if (oldVoiceState.channel.id == "KANALID" && oldVoiceState.member.roles.cache.has("ROL") || oldVoiceState.channel.id == "KANALID" && oldVoiceState.member.roles.cache.has("ROL") ) {  
+      console.log(`Belirlenen whitelist kanalından çıkış yapıldı!`) 
+
+    };
+});
